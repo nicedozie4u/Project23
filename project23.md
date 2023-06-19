@@ -181,6 +181,8 @@ kubectl describe storageclass gp2
 
 ![](./images/create%20pvc.png)
 
+![](./images/checking%20pvc.png)
+
 
 The PVC created is in pending state because PV is not created yet. Editing the nginx-pod.yaml file to create the PV:
 
@@ -215,3 +217,19 @@ spec:
           claimName: nginx-volume-claim
 ```
 - The '/tmp/dozie' directory will be persisted, and any data written in there will be stored permanetly on the volume, which can be used by another Pod if the current one gets replaced.
+
+## Creating a configmap containing the default page as its userdata. This will be populated into created pods irrespective of whether it gets deleted or not.
+
+![](./images/create%20config%20map.png)
+
+![](./images/unedited%20config%20map.png)
+
+![](./images/edit%20config%20map.png)
+
+![](./images/persistence%20sucessful.png)
+
+![](./images/successful%20again.png)
+
+![](./images/final%20test.png)
+
+![](./images/delete%20cluster.png)
