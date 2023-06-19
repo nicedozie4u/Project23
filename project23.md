@@ -36,9 +36,13 @@ eksctl create cluster \
   --nodes 2
 ```
 
+![](./images/install%20eksctl.png)
+
 ![](./images/create%20cluster.png)
 
-![](./images/create%20config%20map.png)
+![](./images/create%20cluster02.png)
+
+
 
 
 # STEP 2: Creating Persistent Volume Manually For The Nginx Application
@@ -69,28 +73,36 @@ spec:
 EOF
 ```
 
-![](./Images/apply%20deployment.PNG)
+![](./images/connect%20to%20cluster.png)
+
+![](./images/confirm%20pods.png)
+
+![](./images/confirm%20deploy.png)
 
 Exec into the deployment to check what is inside the nginx pod
 
-![](./Images/exec%20deploy.PNG)
+![](./images/exec%20into%20pod.png)
 
 Describe the pod and node to get a better information about it
 
 `kubectl get pod (name of pod) -o wide`
 
-![](./Images/describe%20a%20pod%20-o%20wide.PNG)
+![](./images/describe%20pod%20%26%20node.png)
+
+![](./images/describe%20pod%20%26%20node02.png)
 
 `kubectl get describe node (the name where the pod is running) -o wide`
 
-![](./Images/node%20region.PNG)
+![](./images/describe%20pod%20%26%20node03.png)
+
+![](./images/describe%20pod%20%26%20node04.png)
 
 
 - Creating a volume in the Elastic Block Storage section in AWS in the same AZ as the node running the nginx pod which will be used to mount volume into the Nginx pod.
 
-![](./Images/create%20volume.PNG)
+![](./images/create%20EBS%20volume.png)
 
-![](./Images/volume%20created.PNG)
+![](./images/create%20EBS%20volume02.png)
 
 
 - Updating the deployment configuration with the volume spec and volume mount:
@@ -127,7 +139,7 @@ spec:
           fsType: ext4
 ```
 
-![](./Images/volume%20attached.PNG)
+![](./images/update%20deployment%20file.png)
 
 
 # STEP 3: Managing Volumes Dynamically With PV and PVCs
