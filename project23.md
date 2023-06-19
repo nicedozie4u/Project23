@@ -141,6 +141,8 @@ spec:
 
 ![](./images/update%20deployment%20file.png)
 
+![](./images/check%20pod.png)
+
 
 # STEP 3: Managing Volumes Dynamically With PV and PVCs
 
@@ -175,7 +177,9 @@ Checking for the volume binding section:
 kubectl describe storageclass gp2
 ```
 
-![](./Images/vbm.PNG)
+![](./images/persistent%20volume%20created.png)
+
+![](./images/create%20pvc.png)
 
 
 The PVC created is in pending state because PV is not created yet. Editing the nginx-pod.yaml file to create the PV:
@@ -204,10 +208,10 @@ spec:
         - containerPort: 80
         volumeMounts:
         - name: nginx-volume-claim
-          mountPath: /tmp/tony
+          mountPath: /tmp/dozie
       volumes:
       - name: nginx-volume-claim
         persistentVolumeClaim:
           claimName: nginx-volume-claim
 ```
-- The '/tmp/tony' directory will be persisted, and any data written in there will be stored permanetly on the volume, which can be used by another Pod if the current one gets replaced.
+- The '/tmp/dozie' directory will be persisted, and any data written in there will be stored permanetly on the volume, which can be used by another Pod if the current one gets replaced.
