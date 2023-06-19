@@ -226,6 +226,8 @@ spec:
 
 ![](./images/edit%20config%20map.png)
 
+## Changes made on the configmap userdata populated in each pod
+
 ![](./images/persistence%20sucessful.png)
 
 ![](./images/successful%20again.png)
