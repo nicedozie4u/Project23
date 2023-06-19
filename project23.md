@@ -228,10 +228,12 @@ spec:
 
 ## Changes made on the configmap userdata populated in each pod
 
+![](./images/final%20test.png)
+
 ![](./images/persistence%20sucessful.png)
 
 ![](./images/successful%20again.png)
 
-![](./images/final%20test.png)
+
 
 ![](./images/delete%20cluster.png)
