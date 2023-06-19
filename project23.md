@@ -222,9 +222,11 @@ spec:
 
 ![](./images/create%20config%20map.png)
 
+![](./images/edit%20config%20map.png)
+
 ![](./images/unedited%20config%20map.png)
 
-![](./images/edit%20config%20map.png)
+
 
 ## Changes made on the configmap userdata populated in each pod
 
