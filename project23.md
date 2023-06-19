@@ -234,6 +234,6 @@ spec:
 
 ![](./images/successful%20again.png)
 
-
+## Dont forget to destroy the infrastructure
 
 ![](./images/delete%20cluster.png)
